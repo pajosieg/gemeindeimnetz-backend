@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "entries",
+  "info": {
+    "name": "Entry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "entries",
+      "dominant": true
+    },
+    "group": {
+      "model": "group"
+    }
+  }
+}
